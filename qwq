@@ -10,16 +10,20 @@ if len(sys.argv) > 1:
 	while len(mrow) > 0:
 		nya=nya+' '+mrow[0]
 		mrow=mrow[1:]		
-	nya=re.sub("thats","nyas",nya)
-	nya=re.sub("pretty|beautiful","pwetti",nya)
+
 	nya=re.sub("rl","w",nya)
 	nya=re.sub("r","w",nya)
 	nya=re.sub("l","w",nya)
 	nya=re.sub("ow","#@!a#@!o#@!",nya)
 	nya=re.sub("tha","#@!n#@!y#@!a#@!",nya)
-	nya=re.sub("(?<=\b)this(?=\b)","#@!d#@!i#@!s#@!",nya)
 	nya=re.sub("na","#@!n#@!y#@!a#@!",nya)
-	nya=re.sub("th","f",nya)
+	nya=re.sub("ur","r",nya)
+	nya=re.sub("ove\b","uv",nya)
+	nya=re.sub("n(?=[aeiouAEIOU])","ny",nya)
+	nya=re.sub("th\b","f",nya)
+	nya=re.sub("this(?!\b)","fis",nya)
+	nya=re.sub("(?<=\b)this(?=\b)","#@!d#@!i#@!s#@!",nya)
+	nya=re.sub("th","d",nya)
 	nya=re.sub("(?<![aeiouyYAEIOU])e[iya]","#@!y#@!e#@!i#@!",nya)
 	nya=re.sub("(?<![aeiouyYAEIOU])ie","#@!y#@!i#@!e#@!",nya)
 	nya=re.sub("(?<![aeiouyYAEIOU])es","#@!y#@!e#@!s#@!",nya)
@@ -33,6 +37,7 @@ if len(sys.argv) > 1:
 	nya=re.sub("#@!","",nya)
 	print(nya)
 	exit()
+
 while mrow==0:
 		try:
 			nya=input()
